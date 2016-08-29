@@ -41,4 +41,5 @@ Tap allows you to return the array that you applied the method to, as well as sa
 => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]
 
 2.3.0 :004 > fallen_heroes
+
  => ["harambe"]</code></pre>
