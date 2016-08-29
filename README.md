@@ -43,3 +43,22 @@ Tap allows you to return the array that you applied the method to, as well as sa
 2.3.0 :004 > fallen_heroes
 
  => ["harambe"]</code></pre>
+
+
+Similarly, if you want to create a new variable in a method without having that variable returned, you're not left with particularly clean code:
+
+<pre><code>def create_registration_name(name)
+
+    @registration_name = name.split.reverse.join(", ")
+
+    name
+
+end</code></pre>
+
+#tap allows you to clean this up:
+
+<pre><code>def create_registration_name(name)
+   name.tap do |name|
+   @registration_name = name.split.reverse.join(", ")
+  end
+end</code></pre>
