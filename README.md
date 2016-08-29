@@ -18,16 +18,24 @@ You realise you don't need the last object in your array anymore:
  
  However, to deflect attention from your poor popped item, you may want to use the #tap method:
  
- <pre><code>2.3.0 :001 > zoo = ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
- => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"] 
+<pre><code>2.3.0 :001 > zoo = ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
+
+=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"] 
+
 2.3.0 :002 > zoo.tap {|zoo| zoo.pop}
+
 => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</pre></code>
  
- Tap allows you to return the array that you applied the method to, as well as saving the item that you fatefully popped:
+Tap allows you to return the array that you applied the method to, as well as saving the item that you fatefully popped:
  
  <pre><code>2.3.0 :001 > zoo = ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
+
 => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
+
 2.3.0 :002 > fallen_heroes = Array.new
+
 => [] 
+
 2.3.0 :003 > zoo.tap {|zoo| fallen_heroes << zoo.pop}
+
 => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</pre></code>
