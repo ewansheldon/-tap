@@ -62,3 +62,25 @@ The #tap method allows you to clean this up:
    @registration_name = name.split.reverse.join(", ")
   end
 end</code></pre>
+
+
+With hashes, one possible use of #tap is to assign a new value to a key and return the full hash rather than the change you just made.
+
+Rather than: 
+<pre><code>2.3.0 :001 > pet_ages = {cat: 4, dog: 4, fish: 0, hamster: 1}
+
+ => {:cat=>4, :dog=>4, :fish=>0, :hamster=>1}
+ 
+ 2.3.0 :002 > pet_ages[:fish] = 1
+ 
+ => 1 </code></pre>
+ 
+ You can tap into the hash:
+ 
+ <pre><code>2.3.0 :001 > pet_ages = {cat: 4, dog: 4, fish: 0, hamster: 1}
+ 
+ => {:cat=>4, :dog=>4, :fish=>0, :hamster=>1} 
+ 
+2.3.0 :002 > pet_ages.tap {|hash| hash[:fish] = 1}
+
+ => {:cat=>4, :dog=>4, :fish=>1, :hamster=>1} </code></pre>
