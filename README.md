@@ -28,7 +28,7 @@ You realise you don't need the last object in your array anymore:
  
 Tap allows you to return the array that you applied the method to, as well as saving the item that you fatefully popped:
  
- <pre><code>2.3.0 :001 > zoo = ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
+<pre><code>2.3.0 :001 > zoo = ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
 
 => ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse", "harambe"]
 
