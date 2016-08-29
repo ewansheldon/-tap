@@ -24,7 +24,7 @@ You realise you don't need the last object in your array anymore:
 
 2.3.0 :002 > zoo.tap {|zoo| zoo.pop}
 
-=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</pre></code>
+=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</code></pre>
  
 Tap allows you to return the array that you applied the method to, as well as saving the item that you fatefully popped:
  
@@ -38,4 +38,4 @@ Tap allows you to return the array that you applied the method to, as well as sa
 
 2.3.0 :003 > zoo.tap {|zoo| fallen_heroes << zoo.pop}
 
-=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</pre></code>
+=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</code></pre>
