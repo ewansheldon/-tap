@@ -55,7 +55,7 @@ Similarly, if you want to create a new variable in a method without having that 
 
 end</code></pre>
 
-#tap allows you to clean this up:
+The #tap method allows you to clean this up:
 
 <pre><code>def create_registration_name(name)
    name.tap do |name|
