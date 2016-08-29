@@ -38,4 +38,7 @@ Tap allows you to return the array that you applied the method to, as well as sa
 
 2.3.0 :003 > zoo.tap {|zoo| fallen_heroes << zoo.pop}
 
-=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]</code></pre>
+=> ["dog", "cat", "hamster", "guinea pig", "parrot", "seahorse"]
+
+2.3.0 :004 > fallen_heroes
+ => ["harambe"]</code></pre>
